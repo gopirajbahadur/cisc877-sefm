@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Engineering and Foundation Models</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+    th, td {
+        border: 1px solid #000;
+        padding: 8px;
+        text-align: left;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+    td.no-wrap {
+        white-space: nowrap; /* Prevents text wrapping */
+    }
+  </style>
+<body>
+    <!-- Header Section -->
+    <header class="bg-primary text-white text-center py-4">
+        <div class="container">
+            <h1>Software Engineering and Foundation Models</h1>
+            <p>School of Computing - Queen's University, Winter 2025</p>
+        </div>
+    </header>
+
+    <!-- Course Overview Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-primary">Course Overview</h2>
+            <p>Foundation Models are transforming the software landscape by introducing new forms of programming AI systems that are driven by prompts and autonomous agents. This course introduces the software engineering best-practices and state-of-art advances to develop and deploy applications powered by Foundation Models and to use Foundation Models to solve software engineering problems.</p>
+        </div>
+    </section>
+
+    <!-- Objectives Section -->
+    <section class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-primary">Course Objectives</h2>
+            <ul>
+                <li>Prepare students to perform cutting-edge research on software engineering for the development of applications that are based on Foundation Models (FMware).</li>
+                <li>Learn techniques for the systematic and trustworthy engineering of FMware.</li>
+                <li>Gain hands-on experience building small FMware using different tools and approaches.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Instructor Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-primary">Course Instructor(s)</h2>
+            <p> Please note that the course will contain lectures delivered by following co-instructors, who are experts working in the industry. For any question regarding the course, please email the lead instructor.
+            <h3>Lead Instructor</h3> 
+            Dr. Gopi Krishnan Rajbahadur (<a href="mailto:gopikrishnanrajbahadur@gmail.com">gopikrishnanrajbahadur@gmail.com</a>).
+            </p>
+            <h3>Co-Instructors:</h3>
+            <ul>
+                <li>Dr. Filipe R. Cogo</li>
+                <li>Dr. Keheliya Gallaba</li>
+                <li>Dr. Justina Lin</li>
+                <li>Dr. Dayi Lin</li>
+                <li>Dr. Haoxiang Zhang</li>
+                <li>Dr. Gustavo Oliva</li>
+                <li>Ben Rombaut</li>
+                <li>Kirill Vasilevski</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-primary">Course Schedule</h2>
+            <p><strong>Classes:</strong> Wednesdays from 5 PM to 8 PM in Goodwin 521</p>
+            <table class="table table-bordered">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Week</th>
+                        <th>Date</th>
+                        <th>Area</th>
+                        <th>Topic or Activity</th>
+                        <th>Instructor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="no-wrap"><strong>Week 1</strong></td>
+                        <td class="no-wrap"><strong>Jan 15</strong></td>
+                        <td><strong></strong></td>
+                        <td>
+                            
+                                <h5>Introduction to SE&amp;FMs</h5>
+                            <ul>
+                                <li>Overview of FMware</li>
+                                <li>Paper review and presentation guidelines</li>
+                                <li>Course overview</li>
+                            </ul>
+                        </td>
+                        <td> Gopi Krishnan Rajbahadur</td>
+                    </tr>
+                    <tr>
+                        <td class="no-wrap"><strong>Week 2</strong></td>
+                        <td class="no-wrap"><strong>Jan 22</strong></td>
+                        <td class="no-wrap"><strong>SE4FMApp</strong></td>
+                        <td>
+                            
+                                <h5>Prompt Engineering</h5>
+                            <ul>
+                                <li>Basics of prompting--How to talk to a FM</li>
+                                <li>Prompting patterns</li>
+                                <li>Prompt components</li>
+                                <li>Prompt structuring</li>
+                                <li>Prompt decoding strategies</li>
+                                <li>Fragility of prompts--Manual prompt-tuning lifecycle, prompt formatting, context window sensitivity, few-shot ordering, and golden labels</li>
+                                <li>Prompt anti-patterns (e.g. god prompts)--How to decompose a prompt effectively for success</li>
+                                <li>Prompt output structuring and prompt debugging</li>
+                                <li>Compiling prompts for success--prompt optimization, prompt tuning, FM-based prompt mutation and evolution, DSLs for prompt optimization, Intent-based prompt calibration</li>
+                                <li>Common prompting pitfalls</li>
+                                <li>Leveraging prompt ecosystems--Introduction to prompt stores and Reddit discussions</li>
+                            </ul>
+                        </td>
+                        <td><strong>Filipe R Cogo</strong></td>
+                    </tr>
+                    <tr>
+                        <td class="no-wrap"><strong>Week 3</strong></td>
+                        <td class="no-wrap"><strong>Jan 29</strong></td>
+                        <td class="no-wrap"><strong>SE4FMApp</strong></td>
+                        <td>
+                            
+                                <h5>RAG Engineering</h5>
+                            <ul>
+                                <li>What is RAG?--An overview of Indexing, retrieval, and generation</li>
+                                <li>An overview of query translation approaches--Multi-query, RAG-fusion, Least-to-most, step-back prompting, HyDE</li>
+                                <li>Query routing strategies--Logical routing and semantic routing</li>
+                                <li>Query construction strategies</li>
+                                <li>Advanced indexing techniques for effective RAG--Multi-representation indexing, RAPTOR, ColBERT</li>
+                                <li>Graph RAGs</li>
+                                <li>RAG Re-rankers</li>
+                                <li>Large context challenges: Needle in a haystack, counting stars, data movement and caching/pinning of context in the cloud</li>
+                                <li>Context vs built-in prioritization</li>
+                                <li>A reference architecture for enterprise-grade production-ready RAGware</li>
+                            </ul>
+                        </td>
+                        <td>Keheliya Gallaba</td>
+                    </tr>
+                    <tr>
+                        <td class="no-wrap"><strong>Week 4</strong></td>
+                        <td class="no-wrap"><strong>Feb 5</strong></td>
+                        <td class="no-wrap"><strong>SE4FMApp</strong></td>
+                        <td>
+                            
+                                <h5>Alignment Engineering</h5>
+                            <ul>
+                                <li>A general overview of FM pre-training</li>
+                                <li>An overview of the different types of data used for different types of alignment, including:</li>
+                                <ul>
+                                    <li>Pre-training data</li>
+                                    <li>Fine-tuning data</li>
+                                    <li>Preference data</li>
+                                    <li>User-feedback data</li>
+                                    <li>Crowd-sourced data</li>
+                                    <li>Synthetic data</li>
+                                </ul>
+                                <li>Synthetic data generation techniques and data alignment (Microsoft Phi models)</li>
+                                <li>QA for Knowledge distillation--Data quality and knowledge quality enhancing processes like deduplication, information metrics, removing data and knowledge clones</li>
+                                <li>Fine-tuning--supervised fine-tuning, PEFT, Prompt tuning, soft prompts, Adapter tuning, AdapterHub, Selective finetuning (e.g. BiFit), Reparametrization-based fine tuning (LoRA)</li>
+                                <li>Preference tuning--RLHF, DPO, RLSF</li>
+                                <li>Constitutional AI</li>
+                                <li>Overview of curriculum learning</li>
+                                <li>Advanced curriculum generation techniques and benefits, e.g., how curriculum learning is used in the Microsoft-Phi and IBM-Granite models</li>
+                            </ul>
+                        </td>
+                        <td>Gopi Krishnan Rajbahadur</td>
+                    </tr>
+                    <tr>
+                        <td class="no-wrap"><strong>Week 5</strong></td>
+                        <td class="no-wrap"><strong>Feb 12</strong></td>
+                        <td></td>
+                        <td>
+                             <h5>Mid-term evaluation: project proposal presentation</h5>
+                            </ul>
+                        </td>
+                        <td>Gopi Krishnan Rajbahadur</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5" style="text-align: center;"><strong>Feb 18-21 Reading Week</strong></td>
+                    </tr>
+                    <tr>
+                        <td class="no-wrap"><strong>Week 6</strong></td>
+                        <td class="no-wrap"><strong>Feb 26</strong></td>
+                        <td></td>
+                        <td>
+                            
+                                <h5>Mid-term evaluation: assignment presentation</h5>
+                           
+                        </td>
+                        <td>Gopi Krishnan Rajbahadur</td>
+                    </tr>
+                    <tr>
+                        <td class="no-wrap"><strong>Week 7</strong></td>
+                        <td class="no-wrap"><strong>Mar 5</strong></td>
+                        <td><strong>SE4FM</strong><br><strong>SE4FMApp</strong></td>
+                        <td>
+                            
+                                <h5>Quality assurance for FMware</h5>
+                            <ul>
+                                    
+                                    <li>Introduction to the trustworthiness of FMware</li>
+                                    <li>Overview of evaluating an FMware--Importance</li>
+                                    <li>Evaluation primitives--Evaluation with ad hoc vibe checks, benchmarks, manually curated datasets, trace data, data splits, and repetitions</li>
+                                    <li>Evaluation metrics overview</li>
+                                    <li>Evaluating individual components of FMware--Agents, RAG, etc.</li>
+                                    <li>Testing FMware--Unit tests, summary evaluations, response evaluations, regression testing, backtesting</li>
+                                    <li>AI as judge--Overview, benefits, and costs</li>
+                                    <li>How do you select the right model?</li>
+                                    <li>How to benchmark a model?</li>
+                                    <li>How to write a good prompt?</li>
+                                    <li>How to prevent hallucination?</li>
+                                    <li>How to debug prompts?</li>
+                                    <li>How to prevent getting or causing harm? - Guardrails</li>
+                                    <li>How to ensure compliance in dataflow?</li>
+                                    <li>How to conduct quality evaluation?</li>
+                                    <li>How to interact with the users?</li>
+                                    <li>How to operationalize the application?</li>
+                                
+                            </ul>
+                        </td>
+                        <td>Justina Lin and Dayi Lin</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Week 8</strong></td>
+                        <td><strong>Mar 12</strong></td>
+                        <td><strong>SE4FM</strong></td>
+                        <td>
+                            
+                                <h5>Agentic Architecture, Workflows and Development Platforms for Agentic Software</h5>
+                            <ul>    
+                                    <li>What is an Agent (e.g., perception, Brain, Action, Environment)?</li>
+                                    <li>Different types of agentic memory</li>
+                                    <li>How does an Agent use tools (Toolformer, TALM)</li>
+                                    <li>How to enable an Agent to plan and reason--Introduction to theory of mind</li>
+                                    <li>Cognitive architectures--Multi-layered nature (recursion, multi vs single agent architectures)</li>
+                                    <li>Agent patterns--Chains, routers, graphs</li>
+                                    <li>Control mechanisms--Static vs dynamic</li>
+                                    <li>Patterns of multi-agent collaboration</li>
+                                    <li>Self-reflection and multi-agent hacks</li>
+                                
+                            </ul>
+                        </td>
+                        <td>Keheliya Gallaba and Gustavo Oliva</td>
+                    </tr>
+                    <tr>
+                        <td class="no-wrap"><strong>Week 9</strong></td>
+                        <td class="no-wrap"><strong>Mar 19</strong></td>
+                        <td class="no-wrap"><strong>FMwareOps</strong></td>
+                        <td>
+                            
+                                <h5>FMwareOps - Part 1 - Code FMs and Performance Engineering for FMware</h5>
+                            <ul>
+                                    <li>Code generation vs synthesis models, and how they are developed</li>
+                                    <li>Evaluating code generation FMs-Evaluation, output correctness, and benchmarks</li>
+                                    <li>Transformer decoding 101</li>
+                                    <li>Single model serving challenges and the state-of-the-art (e.g., <i>vllm</i>)</li>
+                                    <li>End-to-end performance engineering challenges in the FMware development lifecycle</li>
+                                    <li>Latency considerations for different cognitive architectures</li>
+                                    <li>Multi-model pipeline serving challenges and vision</li>
+                                    <li>Semantic caching and FM routers</li>
+                                
+                            </ul>
+                        </td>
+                        <td>Haoxiang Zhang</td>
+                    </tr>
+                    <tr>
+                        <td class="no-wrap"><strong>Week 10</strong></td>
+                        <td class="no-wrap"><strong>Mar 26</strong></td>
+                        <td class="no-wrap"><strong>FMwareOps</strong></td>
+                        <td>
+                           
+                                <h5>FMwareOps - Part 2 - Observability, Cost Optimization and Productionizing Challenges for FMware</h5>
+                            <ul>
+                                <li>An introduction to FM routing, where requests are routed to FMs of varying sizes and capabilities</li>
+                                <li>A survey of existing routing methods that rely on data-driven learning to make optimal routing decisions</li>
+                                <li>The challenges posed by existing approaches, such as reliance on curated data, complex computations, and the evolution of weaker FMs</li>
+                                <li>The introduction of Real-time Adaptive Routing (RAR), a novel approach that continuously adapts FM routing decisions using guided in-context learning</li>
+                                <li>How RAR reduces dependence on stronger, more expensive FMs while maintaining high response quality</li>
+                                <li>The intra-domain generalization benefits of RAR’s guided learning approach in enhancing weaker FMs</li>
+                                <li>FMware Ops overview</li>
+                                <li>FMware observability overview--What is it, why is it important, and how is it different for FMware</li>
+                                <li>The importance of semantics vs raw observability</li>
+                                <li>Existing observability tools and platforms – strengths and weaknesses</li>
+                                <li>Evaluation and guardrails--Validating FM responses, comparing models on golden sets, measuring response time, tracking and altering observability metrics</li>
+                                <li>An overview of the challenges across the FMware development lifecycle</li>
+                                <li>Testing challenges</li>
+                                <li>Observability-related challenges</li>
+                                <li>Controlled-execution-related challenges</li>
+                                <li>Resource-aware QA challenges</li>
+                                <li>Feedback integration challenges</li>
+                                <li>Built-in quality assurance challenges</li>
+                                <li>Other overarching challenges</li>
+                            </ul>
+                        </td>
+                        <td>Ben Rombaut, Kiril Vasilevski and Gopi Krishnan Rajbahadur</td>
+                    </tr>
+                    <tr>
+                        <td class="no-wrap"><strong>Week 11</strong></td>
+                        <td class="no-wrap"><strong>Apr 2</strong></td>
+                        <td><strong></strong></td>
+                        <td>
+                           
+                                <h5>Final Project Presentation</h5>
+                           
+                        </td>
+                        <td>Gopi Krishnan Rajbahadur</td>
+                    </tr>
+                    <tr>
+                        <td class="no-wrap"><strong>Week 12</strong></td>
+                        <td class="no-wrap"><strong>Apr 9</strong></td>
+                        <td><strong></strong></td>
+                        <td>
+                          
+                                <h5>Final Project Presentation</h5>
+                          
+                        </td>
+                        <td>Gopi Krishnan Rajbahadur</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!--Papers for reading and critiquing Section-->
+    <section class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-primary">Papers for reading and critiquing</h2>
+   
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Topic</th>
+                        <th>Paper for Reading</th>
+                        <th>Paper for Critiquing</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Prompt Engineering</td>
+                        <td>
+                            <ul>
+                                <li>Zhou, Yongchao, et al. "Large language models are human-level prompt engineers." <i>arXiv preprint</i> arXiv:2211.01910 (2022).</li>
+                                <li>Li, Xiang Lisa, and Percy Liang. "Prefix-tuning: Optimizing continuous prompts for generation." <i>arXiv preprint</i> arXiv:2101.00190 (2021).</li>
+                                <li>Pryzant, Reid, et al. "Automatic prompt optimization with "gradient descent" and beam search." <i>arXiv preprint</i> arXiv:2305.03495 (2023).</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Zamfrescu-Pereira et al. "Why Johnny Can’t Prompt: How Non-AI Experts Try (and Fail) to Design LLM Prompts." <i>CHI'23</i></li>
+                                <li>Khattab, Omar, et al. "Dspy: Compiling declarative language model calls into self-improving pipelines." <i>arXiv preprint</i> arXiv:2310.03714 (2023).</li>
+                                <li>Schmidt, Douglas C., et al. "Towards a catalog of prompt patterns to enhance the discipline of prompt engineering." <i>ACM SIGAda Ada Letters</i> 43.2 (2024): 43-51.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>RAG Engineering</td>
+                        <td>
+                            <ul>
+                                <li>Lewis, Patrick, et al. "Retrieval-augmented generation for knowledge-intensive NLP tasks." <i>Advances in Neural Information Processing Systems</i> 33 (2020): 9459-9474.</li>
+                                <li>Zhang, Zhihan, et al. "A unified encoder-decoder framework with entity memory." <i>arXiv preprint</i> arXiv:2210.03273 (2022).</li>
+                                <li>Guu, Kelvin, et al. "Retrieval augmented language model pre-training." <i>International conference on machine learning</i>. PMLR, 2020.</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Gao, Yunfan, et al. "Retrieval-augmented generation for large language models: A survey." <i>arXiv preprint</i> arXiv:2312.10997 (2023).</li>
+                                <li>Li, Zhuowan, et al. "Retrieval augmented generation or long-context LLMs? A comprehensive study and hybrid approach." <i>Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing: Industry Track</i>. 2024.</li>
+                                <li>Edge, Darren, et al. "From local to global: A graph RAG approach to query-focused summarization." <i>arXiv preprint</i> arXiv:2404.16130 (2024).</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Alignment Engineering</td>
+                        <td>
+                            <ul>
+                                <li>Wei, Yuxiang, et al. "Magicoder: Empowering code generation with OSS-instruct." <i>Forty-first International Conference on Machine Learning</i>. 2024.</li>
+                                <li>Shen, Tianhao, et al. "Large language model alignment: A survey." <i>arXiv preprint</i> arXiv:2309.15025 (2023).</li>
+                                <li>Chen, Lichang, et al. "Alpagasus: Training a better alpaca with fewer data." <i>arXiv preprint</i> arXiv:2307.08701 (2023).</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Xia, Chunqiu Steven, Yinlin Deng, and Lingming Zhang. "Top Leaderboard Ranking= Top Coding Proficiency, Always? EvoEval: Evolving Coding Benchmarks via LLM." <i>arXiv preprint</i> arXiv:2403.19114 (2024).</li>
+                                <li>Zhou, Chunting, et al. "Lima: Less is more for alignment." <i>Advances in Neural Information Processing Systems</i> 36 (2024).</li>
+                                <li>Gunasekar, Suriya, et al. "Textbooks are all you need." <i>arXiv preprint</i> arXiv:2306.11644 (2023).</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Quality Assurance for FMware</td>
+                        <td>
+                            <ul>
+                                <li>Evtikhiev, M., et al. "Out of the BLEU: How should we assess quality of the code generation models?." <i>Journal of Systems and Software</i>, 203, 111741 (2023).</li>
+                                <li>Hassan, Ahmed E., et al. "Rethinking software engineering in the era of Foundation Models: A curated catalogue of challenges in the development of trustworthy FMware." <i>Companion Proceedings of the 32nd ACM International Conference on the Foundations of Software Engineering</i>. 2024.</li>
+                                <li>Longpre, Shayne, et al. "The data provenance initiative: A large scale audit of dataset licensing & attribution in AI." <i>arXiv preprint</i> arXiv:2310.16787 (2023).</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Wang, Tianlu, et al. "Self-taught evaluators." <i>arXiv preprint</i> arXiv:2408.02666 (2024).</li>
+                                <li>Chang, Yupeng, et al. "A survey on evaluation of large language models." <i>ACM Transactions on Intelligent Systems and Technology</i> 15.3 (2024): 1-45.</li>
+                                <li>Shankar, Shreya, et al. "Who validates the validators? Aligning LLM-assisted evaluation of LLM outputs with human preferences." <i>Proceedings of the 37th Annual ACM Symposium on User Interface Software and Technology</i>. 2024.</li>
+                            </ul>
+                        </td>
+                    </tr>                    <tr>
+                        <td>Agentic Architecture, Workflows and Development Platforms for Agentic Software</td>
+                        <td>
+                            <ul>
+                                <li>Wang, Guanzhi, et al. "Voyager: An open-ended embodied agent with large language models." <i>arXiv preprint</i> arXiv:2305.16291 (2023).</li>
+                                <li>Guo, Taicheng, et al. "Large language model based multi-agents: A survey of progress and challenges." <i>arXiv preprint</i> arXiv:2402.01680 (2024).</li>
+                                <li>Huang, Xu, et al. "Understanding the planning of LLM agents: A survey." <i>arXiv preprint</i> arXiv:2402.02716 (2024).</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Yao, Shunyu, et al. "React: Synergizing reasoning and acting in language models." <i>arXiv preprint</i> arXiv:2210.03629 (2022).</li>
+                                <li>Sumers, Theodore R., et al. "Cognitive architectures for language agents." <i>arXiv preprint</i> arXiv:2309.02427 (2023).</li>
+                                <li>Xu, Frank F., et al. "TheAgentCompany: Benchmarking LLM agents on consequential real-world tasks." <i>arXiv preprint</i> arXiv:2412.14161 (2024).</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>FMwareOps for FMware - Part 1 - Code FMs and Performance Engineering</td>
+                        <td>
+                            <ul>
+                                <li>Yu, Gyeong-In, et al. "Orca: A distributed serving system for {Transformer-Based} generative models." <i>16th USENIX Symposium on Operating Systems Design and Implementation (OSDI)</i> 2022.</li>
+                                <li>Agrawal, Amey, et al. "Etalon: Holistic Performance Evaluation Framework for LLM Inference Systems." <i>arXiv preprint</i> arXiv:2407.07000 (2024).</li>
+                                <li>Hassan, Ahmed E., et al. "Towards AI-Native Software Engineering (SE 3.0): A Vision and a Challenge Roadmap." <i>arXiv preprint</i> arXiv:2410.06107 (2024).</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Tian, et al., "Fixing Large Language Models' Specification Misunderstanding." <i>arXiv preprint</i> arXiv:2309.16120v3 (2024).</li>
+                                <li>Liu, Jiawei, et al. "Is your code generated by ChatGPT really correct? Rigorous evaluation of large language models for code generation." <i>Advances in Neural Information Processing Systems</i> 36 (2024).</li>
+                                <li>Tan, Xin, et al. "Teola: Towards end-to-end optimization of LLM-based applications." <i>arXiv preprint</i> arXiv:2407.00326 (2024).</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>FMwareOps for FMware - Part 2 - Observability, Cost Optimization and Productionizing Challenges</td>
+                        <td>
+                            <ul>
+                                <li>Rajbahadur, Gopi Krishnan, et al. "From Cool Demos to Production-Ready FMware: Core Challenges and a Technology Roadmap." <i>arXiv preprint</i> arXiv:2410.20791 (2024).</li>
+                                <li>Yu, Minchen, et al. "FaaSwap: SLO-Aware, GPU-Efficient Serverless Inference via Model Swapping." <i>arXiv preprint</i> arXiv:2306.03622 (2023).</li>
+                                <li><a href="https://www.oreilly.com/radar/what-we-learned-from-a-year-of-building-with-llms-part-i/">What We Learned from a Year of Building with LLMs - Part I</a></li>
+                                <li><a href="https://www.oreilly.com/radar/what-we-learned-from-a-year-of-building-with-llms-part-ii/">What We Learned from a Year of Building with LLMs - Part II</a></li>
+                                <li><a href="https://www.oreilly.com/radar/what-we-learned-from-a-year-of-building-with-llms-part-iii-strategy/">What We Learned from a Year of Building with LLMs - Part III</a></li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Parnin, Chris, et al. "Building Your Own Product Copilot: Challenges, Opportunities, and Needs." <i>arXiv preprint</i> arXiv:2312.14231 (2023).</li>
+                                <li>Nahar, Nadia, et al. "Beyond the Comfort Zone: Emerging Solutions to Overcome Challenges in Integrating LLMs into Software Products." <i>arXiv preprint</i> arXiv:2410.12071 (2024).</li>
+                                <li>Lu, Keming, et al. "Routing to the expert: Efficient reward-guided ensemble of large language models." <i>arXiv preprint</i> arXiv:2311.08692 (2023).</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+            </section>
+    <!-- Requirements Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-primary">Course Requirements</h2>
+            <p>Students are expected to have background knowledge in software engineering and machine learning.</p>
+        </div>
+    </section>
+    <section class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-primary">Course Requirements</h2>
+            <p>Students are expected to have background knowledge in software engineering and machine learning.</p>
+    
+            <h3>Evaluation</h3>
+            <p>Students will be evaluated using the following breakdown:</p>
+            <ol>
+                <li>
+                    <strong>Classroom participation (10%)</strong>
+                    <p>Students are expected to read all papers assigned in a week, come to class prepared to discuss their thoughts, and take part in the classroom discussions.</p>
+                </li>
+                <li>
+                    <strong>Paper presentation and discussion (30%)</strong>
+                    <p>A set of papers related to the topics covered in the course will be assigned to each student who will act as a presenter and a discussant. The presentation will be given during each lecture and should last 20 minutes strictly, and the discussion should last between 15 and 20 minutes (time might be adjusted depending on the number of enrolled students). Each student must upload their slides to EasyChair before the paper presentation.</p>
+                    <ul>
+                        <li>
+                            <strong>Role of presenter:</strong> As a presenter, you should not simply repeat the papers’ content (remember you only have 15 mins). Instead, you should point out the main important findings of the papers you are reviewing. You should highlight any novel contributions, surprises, and other possible applications of the proposed techniques. You should check the authors’ other work related to the presented paper. Finally, you should place the work relative to other papers covered in the course (especially the papers covered in that particular week or topic).
+                        </li>
+                        <li>
+                            <strong>Role of discussant:</strong> As a discussant, you should take an adversarial position by pointing out weak and controversial positions in the paper. You should present a short rebuttal of the paper. You should come prepared with problems and counterexamples for the presented work.
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Assignment (20%)</strong>
+                    <p>Each group of 3-4 students is expected to complete an assignment where they will familiarize themselves with common development frameworks for Foundation Model applications and implement a small demo application. They are expected to present their design and demo their results for midterm evaluation. The assignment will be graded according to the interestingness of the proposed case, the design of the solution, and the presentation quality of the results.</p>
+                </li>
+                <li>
+                    <strong>Final project (40%)</strong>
+                    <p>One original project, which is done individually (10 pages, IEEE format). The project should explore one or more topics that are covered in the course.</p>
+                    <p>A project proposal (2 pages IEEE format) should be submitted around 1.5 months before the end of the term. The proposal should provide a brief motivation for the project, a detailed discussion of the topic that will be explored in the project, along with a timeline of milestones and expected outcomes. At least 3 papers should be cited in your proposal.</p>
+                    <p>A presentation should be done on the same day as the delivery date of the final project proposal. The presentation will last 15 minutes strictly (time might be adjusted depending on the number of enrolled students), with feedback being provided by the instructor and other students with respect to the feasibility of the proposal.</p>
+                    <p>The final project will be graded according to the originality and interestingness of your project, the depth of your work, the correctness of your analysis, and the presentation quality of your written report and class presentation (20-minute presentation done in the last 2 weeks of classes reporting the results of the final project).</p>
+                </li>
+            </ol>
+    
+            <h3>Requirements for Auditing the Course</h3>
+            <p>Given the limited space and the interactive nature of the course, the students who are enrolled to audit the course are expected to participate in the paper presentations and the assignment. They can choose not to participate in the final project.</p>
+        </div>
+    </section>
+    
+ 
+    <!-- Registration Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-primary">Course Registration</h2>
+            <p>Please <a href="https://docs.google.com/spreadsheets/d/1qO7viG64yAiGmP0-gXlrPl8VQxy4xBqrfIw0jCuIL24/edit?usp=sharing">register here</a> for the course. Indicate whether you are attending or auditing the course. Auditors must participate in paper presentations and the assignment.</p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-primary text-white text-center py-3">
+        <div class="container">
+            <p>&copy; 2025 AIware. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
